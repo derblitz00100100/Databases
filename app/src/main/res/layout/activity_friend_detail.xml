@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FriendDetailActivity">
+
+    <EditText
+        android:id="@+id/editText_frienddetail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/textView_frienddetail_clumsiness"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/textView_frienddetail_clumsiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="clumsiness"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar_frienddetail_clumsiness"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_frienddetail_name" />
+
+    <SeekBar
+        android:id="@+id/seekBar_frienddetail_clumsiness"
+        android:layout_width="204dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/switch_frienddetail_awesomeness"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_frienddetail_clumsiness" />
+
+    <Switch
+        android:id="@+id/switch_frienddetail_awesomeness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Awesomeness"
+        app:layout_constraintBottom_toTopOf="@+id/textView_frienddetail_gym"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_frienddetail_clumsiness" />
+
+    <TextView
+        android:id="@+id/textView_frienddetail_gym"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gym Frequency"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar_frienddetail_gym"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_frienddetail_awesomeness" />
+
+    <SeekBar
+        android:id="@+id/seekBar_frienddetail_gym"
+        android:layout_width="196dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_frienddetail_trust"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_frienddetail_gym" />
+
+    <TextView
+        android:id="@+id/textView_frienddetail_trust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trust"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar_frienddetail_trust"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_frienddetail_gym" />
+
+    <RatingBar
+        android:id="@+id/ratingBar_frienddetail_trust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textView_frienddetail_money"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_frienddetail_trust" />
+
+    <EditText
+        android:id="@+id/editText_frienddetail_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_frienddetail_money" />
+
+    <TextView
+        android:id="@+id/textView_frienddetail_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Money Owed"
+        app:layout_constraintBottom_toTopOf="@+id/editText_frienddetail_money"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar_frienddetail_trust" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
