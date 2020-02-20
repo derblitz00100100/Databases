@@ -35,9 +35,11 @@
         android:id="@+id/seekBar_frienddetail_clumsiness"
         android:layout_width="204dp"
         android:layout_height="27dp"
+        android:max="10"
+        android:progress="2"
         app:layout_constraintBottom_toTopOf="@+id/switch_frienddetail_awesomeness"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_frienddetail_clumsiness" />
 
@@ -64,8 +66,10 @@
 
     <SeekBar
         android:id="@+id/seekBar_frienddetail_gym"
-        android:layout_width="196dp"
+        android:layout_width="195dp"
         android:layout_height="25dp"
+        android:max="10"
+        android:progress="5"
         app:layout_constraintBottom_toTopOf="@+id/textView_frienddetail_trust"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -87,6 +91,8 @@
         android:id="@+id/ratingBar_frienddetail_trust"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="3"
         app:layout_constraintBottom_toTopOf="@+id/textView_frienddetail_money"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
