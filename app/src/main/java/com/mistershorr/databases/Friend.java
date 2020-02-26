@@ -1,7 +1,11 @@
 package com.mistershorr.databases;
 
-public class Friend {
+import android.os.Parcel;
+import android.os.Parcelable;
 
+public class Friend implements Parcelable {
+
+    private int clumsiness;
     private double gymFrequency;
     private boolean isAwesome;
     private double moneyOwed;
@@ -12,7 +16,6 @@ public class Friend {
 
     }
 
-    private int clumsiness;
 
     public int getClumsiness() {
         return clumsiness;
@@ -73,4 +76,40 @@ public class Friend {
                 ", clumsiness=" + clumsiness +
                 '}';
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeDouble(this.gymFrequency);
+        dest.writeByte(this.isAwesome ? (byte) 1 : (byte) 0);
+        dest.writeDouble(this.moneyOwed);
+        dest.writeString(this.name);
+        dest.writeInt(this.trustworthiness);
+        dest.writeInt(this.clumsiness);
+    }
+
+    protected Friend(Parcel in) {
+        this.gymFrequency = in.readDouble();
+        this.isAwesome = in.readByte() != 0;
+        this.moneyOwed = in.readDouble();
+        this.name = in.readString();
+        this.trustworthiness = in.readInt();
+        this.clumsiness = in.readInt();
+    }
+
+    public static final Creator<Friend> CREATOR = new Creator<Friend>() {
+        @Override
+        public Friend createFromParcel(Parcel source) {
+            return new Friend(source);
+        }
+
+        @Override
+        public Friend[] newArray(int size) {
+            return new Friend[size];
+        }
+    };
 }
